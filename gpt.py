@@ -10,7 +10,6 @@ bot = Bot(token=bot_token)
 
 client = OpenAI()
 
-
 def run_conversation(userid, text):
     conv=load_json("data/conversation.json")
     conv.append({"role": "user", "content": text})
