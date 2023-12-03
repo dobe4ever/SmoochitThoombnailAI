@@ -35,8 +35,8 @@ def get_photo(update: Update, context):
     # download file
     file.download(f"uploads/photo.{extension}") 
 
-    # Crop the image to a 1:1 ratio
-    crop_edges(f"uploads/photo.{extension}") # This will overwrite the original image with the cropped one
+    # Crop the image & overwrite the original one with the cropped one
+    crop_edges(f"uploads/photo.{extension}")
 
     resp = run_conversation(userid, "Here's the image: uploads/photo.jpg")
     bot.send_message(chat_id=userid, text=resp)

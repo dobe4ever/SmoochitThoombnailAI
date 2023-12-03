@@ -2,39 +2,6 @@
 
 from PIL import Image, ImageDraw, ImageFont
 
-# def crop_center(image_path):
-#     with Image.open(image_path) as img:
-#         width, height = img.size
-#         new_size = min(width, height)
-#         left = (width - new_size) // 2
-#         top = (height - new_size) // 2
-#         right = (width + new_size) // 2
-#         bottom = (height + new_size) // 2
-#         img_cropped = img.crop((left, top, right, bottom))
-#         img_cropped.save(image_path)
-
-# def crop_center(image_path, horizontal_offset=1, vertical_offset=1):
-#     with Image.open(image_path) as img:
-#         width, height = img.size
-#         new_size = min(width, height)
-
-#         # Calculate the offset based on the orientation of the image
-#         if width > height:  # Horizontal photo
-#             left = int((width - new_size) * horizontal_offset)
-#             right = width - int((width - new_size) * (1 - horizontal_offset))
-#         else:  # Vertical photo
-#             left = (width - new_size) // 2
-#             right = (width + new_size) // 2
-
-#         if height > width:  # Vertical photo
-#             top = int((height - new_size) * vertical_offset)
-#             bottom = height - int((height - new_size) * (1 - vertical_offset))
-#         else:  # Horizontal photo
-#             top = (height - new_size) // 2
-#             bottom = (height + new_size) // 2
-
-#         img_cropped = img.crop((left, top, right, bottom))
-#         img_cropped.save(image_path)
 
 def crop_edges(image_path, target_width=643, target_height=722):
     with Image.open(image_path) as img:
